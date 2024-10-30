@@ -4,8 +4,21 @@ import '../widgets/custom_button.dart';
 import '../widgets/info_tile.dart';
 import '../widgets/vehicle_info_card.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool isButtonPressed = false; 
+
+  void buttonPressed() {
+    setState(() {
+      isButtonPressed = !isButtonPressed;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +35,11 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               vehicleInfoCard(ht),
               const SizedBox(height: 10),
-              customButton(ht, () {}),
+              CustomButton(
+                height: ht,
+                onPressed: buttonPressed,
+                isButtonPressed: isButtonPressed,
+              ),
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -50,6 +67,13 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.chat,
+          color: Colors.blue,
         ),
       ),
     );

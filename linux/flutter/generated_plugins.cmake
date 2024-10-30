@@ -3,7 +3,6 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  holdable_button
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

@@ -91,11 +91,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   google_fonts:
     dependency: "direct main"
     description:
@@ -104,14 +99,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.2.1"
-  holdable_button:
-    dependency: "direct main"
-    description:
-      name: holdable_button
-      sha256: "476a110010bf5ac89175fdbbec88b44884cef08da36420983f7508cf53de2f0a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.12"
   http:
     dependency: transitive
     description:
